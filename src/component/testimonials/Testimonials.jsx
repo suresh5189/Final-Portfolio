@@ -27,7 +27,7 @@ const Testimonials = () => {
           <div className="certificate_title">
             <h3>Front-End Web Development Essentials Bootcamp</h3>
             <div className="certificate_details">
-            <a href=""><span>Devtown</span></a> - 2022
+            <a href="https://drive.google.com/file/d/1KFg_G9mO2gnh-0FYETEB7WgQZZkU9es9/view" target="_blank" rel="noreferrer"><span>Devtown</span></a> - 2022
             </div>
           </div>
         </div>
