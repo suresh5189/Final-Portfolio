@@ -24,6 +24,10 @@ import react from "../../images/react.svg";
 import express from "../../images/express.svg";
 import jquery from "../../images/jquery.svg";
 import tailwind from "../../images/tailwind.svg"
+import framerMotion from '../../images/framerMotion.svg';
+import dart from '../../images/dart.svg';
+import flutter from '../../images/flutter.svg';
+import typescript from '../../images/typescript.svg';
 import {motion} from 'framer-motion';
 import { graphic, leftToRight, linux } from "../../animation/experience";
 
@@ -69,6 +73,12 @@ const Experience = () => {
             <article className="experience_details">
               <img src={css3} alt="" />
             </article>
+            <article className="experience_details">
+              <img src={dart} alt="" />
+            </article>
+            <article className="experience_details">
+              <img src={typescript} alt="" />
+            </article>
           </div>
         </div>
         <div className="experience_backend">
@@ -91,6 +101,12 @@ const Experience = () => {
             </article>
             <article className="experience_details">
               <img src={tailwind} alt="" />
+            </article>
+            <article className="experience_details">
+              <img src={flutter} alt="" />
+            </article>
+             <article className="experience_details">
+              <img src={framerMotion} alt="" />
             </article>
           </div>
         </div>

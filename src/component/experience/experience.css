@@ -26,7 +26,6 @@
 .experience_content {
   display: flex;
   gap: 0.5rem;
-  /* grid-template-columns:repeat(7,1fr); */
 }
 
 .experience_frontend {
@@ -41,7 +40,7 @@
   width: 63%;
 }
 
-.experience .experience_content{
+.experience_content{
   display: grid;
   grid-template-columns:repeat(7,1fr);
 }

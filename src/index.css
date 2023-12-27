@@ -36,10 +36,9 @@ html {
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--color-bg);
-    background-color: #222222;
     color: var(--color-white);
     line-height: 1.7;
-    background-image: url(./assets/bg-texture.png);
+    /* background-image: url(./assets/bg-texture.png); */
 }
 
 
