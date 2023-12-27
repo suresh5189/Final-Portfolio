@@ -24,14 +24,30 @@ import react from "../../images/react.svg";
 import express from "../../images/express.svg";
 import jquery from "../../images/jquery.svg";
 import tailwind from "../../images/tailwind.svg"
+import {motion} from 'framer-motion';
+import { graphic, leftToRight, linux } from "../../animation/experience";
 
 const Experience = () => {
   return (
     <section id="experience">
-      <h5>What Skills I Have</h5>
-      <h2>My Experience</h2>
+      <motion.h5
+      variants={linux}
+        initial="initial"
+        whileInView="animate"
+      >What Skills I Have</motion.h5>
+      <motion.h2
+       variants={leftToRight}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+      >My Experience</motion.h2>
 
-      <div className="container experience_container">
+      <motion.div 
+      variants={graphic}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      className="container experience_container">
         <div className="experience_frontend">
           <h3>Language</h3>
           <div className="experience_content">
@@ -119,7 +135,7 @@ const Experience = () => {
             </article>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

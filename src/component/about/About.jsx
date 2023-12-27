@@ -4,6 +4,9 @@ import ME from "../../assets/suresh.jpg";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
+import {motion} from 'framer-motion';
+import { leftToRightStiff } from "../../animation/experience";
+import { bottomToTop } from "../../animation/project";
 
 const About = () => {
   return (
@@ -11,11 +14,15 @@ const About = () => {
       <h5>Get TO Know</h5>
       <h2>About Me</h2>
       <div className="container about_container">
-        <div className="about_me">
+        <motion.div 
+        variants={leftToRightStiff}
+        initial="initial"
+        whileInView="animate"
+        className="about_me">
           <div className="about_me-image">
             <img src={ME} alt="About" />
           </div>
-        </div>
+        </motion.div>
 
         <div className="about_content">
           <div className="about_cards">
@@ -35,7 +42,12 @@ const About = () => {
               <small>20+ Completed</small>
             </article>
           </div>
-          <p>
+          <motion.p
+          variants={bottomToTop}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          >
             Hello! My name is Suresh, Front-developer and Designer based in
             Surat. My interest in Web development started when I got to know
             about the inspect element where we can change anything on the
@@ -46,7 +58,7 @@ const About = () => {
             Currently I am Pre-final
             student, pursuing my majors in Computer Science and Engineering from
             SRM, KTR
-          </p>
+          </motion.p>
           <a href="#contact" className="btn btn-primary">
             Get in Touch
           </a>
