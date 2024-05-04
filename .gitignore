@@ -22,7 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-
-# files
-/src/images
-/src/Resume
+# ignore src
+/src/assets
+/Resume

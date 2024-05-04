@@ -1,5 +1,6 @@
 import React from "react";
 import "./portfolio.css";
+import CoffeeShopApp from '../../assets/CoffeeShopApp.jpg';
 import TeslaApp from "../../assets/TeslaApp.jpg";
 import PvrApp from "../../assets/PvrApp.jpg";
 import NikeApp from "../../assets/NikeApp.jpg";
@@ -11,24 +12,30 @@ import { leftToRight } from "../../animation/experience";
 const Data = [
   {
     id: 0,
+    image: CoffeeShopApp,
+    title: "Coffee Shop App",
+    github: "https://github.com/suresh5189/Coffee-Shop-App",
+  },
+  {
+    id: 1,
     image: PvrApp,
     title: "PVR Movie Booking App",
     github: "https://github.com/suresh5189/PVR-Movie-Booking-App",
   },
   {
-    id: 1,
+    id: 2,
     image: NikeApp,
     title: "Nike App",
     github: "https://github.com/suresh5189/Nike-App",
   },
   {
-    id: 2,
+    id: 3,
     image: TeslaApp,
     title: "Tesla Clone App",
     github: "https://github.com/suresh5189/Tesla-Clone-Android-App",
   },
   {
-    id: 3,
+    id: 4,
     image: InstagramApp,
     title: "Instagram Clone App",
     github: "https://github.com/suresh5189/instagram-clone",
