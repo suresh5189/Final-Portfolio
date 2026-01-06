@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
 
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -11,38 +12,51 @@
 }
 
 :root {
-    --color-bg: #202030;
-    --color-bg-variant: #2c2c6c;
-    --color-primary: #4db5ff;
-    --color-primary-variant: rgba(77, 181, 255, 0.4);
-    --color-white: #fff;
-    --color-light: rgba(255, 255, 255, 0.6);
-    
-    --transition: all 400ms ease;
-    
+  /* --- Balanced "Middle-Tone" Palette --- */
+  --color-bg: #18181b; /* Zinc 900 - Not black, but a deep warm gray */
+  --color-bg-variant: #27272a; /* Zinc 800 - For depth */
+  --color-primary: #a1a1aa; /* Muted Silver-Zinc */
+  --color-accent: #ffffff; /* Pure white only for highlights */
+  --color-primary-variant: rgba(255, 255, 255, 0.1);
+  --color-white: #e4e4e7; /* Off-white for readability */
+  --color-light: #71717a; /* Dimmed Zinc for secondary text */
+
+  /* --- Professional UI Details --- */
+  --glass-bg: rgba(39, 39, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --transition: all 400ms cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* Layout */
   --container-width-lg: 75%;
   --container-width-md: 86%;
-  --container-width-sm: 90%;
+  --container-width-sm: 92%;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
+/* Custom Minimalist Scrollbar */
 ::-webkit-scrollbar {
-    display: none;
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-variant);
+  border-radius: 10px;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background-color: var(--color-bg);
-    color: var(--color-white);
-    line-height: 1.7;
-    /* background-image: url(./assets/bg-texture.png); */
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
-
-/*----- General Styles ----------*/
+/*----- Professional Typography ----------*/
 
 .container {
   width: var(--container-width-lg);
@@ -54,94 +68,102 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: 500;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--color-accent);
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2.8rem, 7vw, 4.5rem);
+  line-height: 1.1;
+  /* Balanced Gradient: Silver to White */
+  /* background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%); */
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
 }
 
-section {
-  margin-top: 8rem;
-}
-
-section > h2,
 section > h5 {
   text-align: center;
   color: var(--color-light);
-}
-
-section > h4 {
-  text-align: center;
-  margin-bottom: 3rem;
-  color: var(--color-light);
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.75rem;
+  margin-bottom: 0.8rem;
 }
 
 section > h2 {
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
 }
 
-.text-light {
-  color: var(--color-light);
-}
-
-a {
-  color: var(--color-primary);
-  transition: var(--transition);
-}
-
-a:hover {
-  color: var(--color-white);
-}
-
+/* Elite "Monochrome" Buttons */
 .btn {
   width: max-content;
   display: inline-block;
-  color: var(--color-primary);
-  padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
+  color: var(--color-white);
+  border-radius: 8px; /* Slightly sharper for a professional look */
   cursor: pointer;
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--glass-border);
+  background: var(--color-bg-variant);
+  font-weight: 600;
+  font-size: 0.9rem;
   transition: var(--transition);
 }
 
 .btn:hover {
-  background-color: var(--color-white);
+  background-color: var(--color-accent);
   color: var(--color-bg);
-  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary {
-  background: var(--color-primary);
+  background: var(--color-white);
   color: var(--color-bg);
+}
+
+.btn-primary:hover {
+  background: #ffffff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+/* Professional Balanced Card */
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  background: rgba(39, 39, 42, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 img {
   display: block;
   width: 100%;
+  border-radius: 1rem;
+  filter: saturate(0.8); /* Muted colors look more professional */
+  transition: var(--transition);
 }
 
-/*---------Media Queries (Medium Devices) ----------------*/
+img:hover {
+  filter: saturate(1);
+}
 
+/* Media Queries */
 @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
   }
-
-  section {
-    margin-top: 6rem;
-  }
 }
-
-/*---------Media Queries (Small Devices) ----------------*/
 
 @media screen and (max-width: 600px) {
   .container {
     width: var(--container-width-sm);
-  }
-
-  section > h2 {
-    margin-top: 2rem;
   }
 }
