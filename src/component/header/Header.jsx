@@ -18,7 +18,6 @@ import {
 
 // Assets
 import ME_IMG from "../../assets/my.png";
-import ResumePDF from "../../Resume/Resume.pdf";
 
 const Header = () => {
   const { scrollY } = useScroll();
@@ -96,7 +95,7 @@ const Header = () => {
               <MainBtn href="#contact">
                 Work Together <BsArrowRight className="arrow" />
               </MainBtn>
-              <DownloadBtn href={ResumePDF} download>
+              <DownloadBtn href={'./Resume.pdf'} download>
                 Get CV <FiDownload />
               </DownloadBtn>
             </ActionGroup>
